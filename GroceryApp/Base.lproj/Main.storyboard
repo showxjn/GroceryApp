@@ -13,7 +13,7 @@
         <!--Grocery Lists-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="GroceryApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="GroceryListsViewController" customModule="GroceryApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -56,6 +56,10 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="PSz-An-YV3"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="xaW-82-Cqq"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -68,6 +72,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="groceryListTableView" destination="LZv-0d-fh6" id="g6g-A6-J5q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -142,7 +149,7 @@
         <!--Grocery Items-->
         <scene sceneID="wD1-1z-r3O">
             <objects>
-                <viewController id="YbD-Qx-VKB" sceneMemberID="viewController">
+                <viewController id="YbD-Qx-VKB" customClass="GroceryItemsViewController" customModule="GroceryApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KWa-XL-0VG"/>
                         <viewControllerLayoutGuide type="bottom" id="kda-ev-LKG"/>
@@ -156,7 +163,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Grocery Items" textLabel="Soa-Y0-8Cl" detailTextLabel="KQI-Gv-E3z" style="IBUITableViewCellStyleValue1" id="FGl-sl-JIn">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="Soa-Y0-8Cl" detailTextLabel="KQI-Gv-E3z" style="IBUITableViewCellStyleValue1" id="FGl-sl-JIn">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FGl-sl-JIn" id="Fj2-xr-5tH">
@@ -181,6 +188,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="YbD-Qx-VKB" id="3Et-4l-NbI"/>
+                                    <outlet property="delegate" destination="YbD-Qx-VKB" id="oNq-k3-gKq"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -192,6 +203,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="groceryItemsTableView" destination="bXO-zw-veV" id="yar-ma-jVm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hd0-Ka-Fsf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
